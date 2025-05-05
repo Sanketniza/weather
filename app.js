@@ -22,7 +22,7 @@ const themeToggle = document.querySelector('.theme-toggle');
 let currentCity = '';
 let favorites = [];
 
-// Initialize the application
+// Initialize the application , also called main function or entry point
 function initApp() {
     loadFavorites();
     loadTheme();
@@ -190,7 +190,7 @@ function updateForecast(data) {
     forecastElement.innerHTML = '';
     
     // Group forecast data by day (using date without time)
-    const dailyForecasts = {};
+    const dailyForecasts = {}; // it's an object where keys are dates and values are objects with forecast data for that day
     
     data.list.forEach(item => {
         const date = new Date(item.dt * 1000);
