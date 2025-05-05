@@ -1,5 +1,16 @@
 {
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "A feature-rich weather dashboard application",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server",
+    "build": "echo 'No build step required'"
+  },
   "dependencies": {
     "build": "^0.1.4"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
