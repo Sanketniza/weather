@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="location-btn" title="Use current location"><i class="fas fa-map-marker-alt"></i></button>
+            </div>
+            <div id="error-container" class="error-container"></div>
+        </div>
+
+        <div class="weather-container">
+            <div class="current-weather">
+                <div class="weather-header">
+                    <h2 id="city-name">--</h2>
+                    <button id="favorite-btn" class="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <p id="current-date">--</p>
+                <div class="weather-info">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div class="temperature">
+                        <h2 id="temperature">--°C</h2>
+                        <p id="feels-like">Feels like: --°C</p>
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-cloud"></i>
+                        <div>
+                            <p>Weather</p>
+                            <p id="weather-description">--</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p>Humidity</p>
+                            <p id="humidity">--%</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Wind Speed</p>
+                            <p id="wind-speed">-- m/s</p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <div>
+                            <p>Pressure</p>
+                            <p id="pressure">-- hPa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-container">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast" id="forecast">
+                    <!-- Forecast cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="favorites-container">
+            <h2>Favorite Cities</h2>
+            <div id="favorites-list" class="favorites-list">
+                <!-- Favorite cities will be inserted here by JavaScript -->
+                <p id="no-favorites" class="no-favorites">No favorite cities added yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Weather Dashboard Team | Using OpenWeatherMap API</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
