@@ -13,7 +13,7 @@ const CONFIG = {
     
     // Default settings
     DEFAULT_CITY: "London",
-    UNITS: "metric", // Options: metric, imperial
+    UNITS: "imperial", // Options: metric, imperial
     
     // Local storage keys
     STORAGE_KEYS: {
